@@ -1,1 +1,5 @@
-<ul id="restaurants-list"></ul>
+<ul id="restaurants-list">
+    <li class="restaurant-item" *ngFor="let restaurant of restaurants">
+        <restaurant-item [restaurant]="restaurant"></restaurant-item>
+    </li>
+</ul>

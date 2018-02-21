@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { Restaurant } from '../../../shared/model/restaurant';
 
 @Component({
   selector: 'restaurant-item',
@@ -8,11 +9,12 @@ import { Component, OnInit, Input } from '@angular/core';
 export class RestaurantItemComponent implements OnInit {
 
   @Input()
-  restaurant;
+  restaurant: Restaurant;
 
   constructor() { }
 
   ngOnInit() {
+    console.log(this.restaurant);
   }
 
 }

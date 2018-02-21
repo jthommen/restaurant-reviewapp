@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
+import { HttpClientModule} from '@angular/common/http';
 
 // Custom Component Imports
 import { AppComponent } from './app.component';
@@ -13,6 +14,22 @@ import { RestaurantItemComponent } from './overview-section/restaurant-item/rest
 import { DetailSectionComponent } from './detail-section/detail-section.component';
 import { RestaurantDetailComponent } from './detail-section/restaurant-detail/restaurant-detail.component';
 import { FooterComponent } from './footer/footer.component';
+import { RestaurantService } from './services/restaurant.service';
+
+// NgRx Imports
+import { ActionReducerMap, StoreModule } from '@ngrx/store';
+import { EffectsModule } from '@ngrx/effects';
+import { StoreDevtoolsModule } from '@ngrx/store-devtools';
+import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application-state';
+import { dataState } from './store/reducers/DataStateReducer';
+import { uiState } from './store/reducers/UiStateReducer';
+import { LoadRestaurantDataEffectService } from './store/effects/load-restaurant-data-effect.service';
+
+// Combined reducer for application state
+export const reducers: ActionReducerMap<ApplicationState> = {
+  dataState,
+  uiState
+};
 
 
 @NgModule({
@@ -30,11 +47,17 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),
+    StoreDevtoolsModule.instrument({maxAge: 25}),
+    EffectsModule.forRoot([
+      LoadRestaurantDataEffectService
+    ]),
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAY6KNYUj8C4vNV8acp8pIw0FX4-HyDBn4'
     })
   ],
-  providers: [],
+  providers: [RestaurantService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

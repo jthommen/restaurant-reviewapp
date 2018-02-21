@@ -10,6 +10,7 @@ const port = 8090;
 const app: Application = express();
 
 app.use(bodyParser.json());
+app.use('/img', express.static(__dirname + '/public/img'));
 
 // API Endpoints
 

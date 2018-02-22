@@ -1,6 +1,7 @@
 export interface Restaurant {
     id:number;
     name: string;
+    neighborhood: string;
     photograph:string[];
     address: string;
     latlng: {

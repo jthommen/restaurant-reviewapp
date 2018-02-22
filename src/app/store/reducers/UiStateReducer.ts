@@ -30,7 +30,7 @@ function handleSelectFilterCuisineAction(state: UiState, action: SelectFilterCui
 function handleSelectFilterNeighborhoodAction(state: UiState, action: SelectFilterNeighborhoodAction): UiState {
     const newUiState: UiState = _.clone(state);
 
-    newUiState.filterCuisines = action.payload;
+    newUiState.filterNeighborhoods = action.payload;
 
     return newUiState;
 }

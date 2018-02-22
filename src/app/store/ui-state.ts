@@ -4,6 +4,6 @@ export interface UiState {
 }
 
 export const INITIAL_UI_STATE: UiState = {
-    filterNeighborhoods: 'All Neighborhoods',
-    filterCuisines: 'All Cuisines'
+    filterNeighborhoods: 'All',
+    filterCuisines: 'All'
 }

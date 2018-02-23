@@ -26,11 +26,16 @@ import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application
 import { dataState } from './store/reducers/DataStateReducer';
 import { uiState } from './store/reducers/UiStateReducer';
 import { LoadRestaurantDataEffectService } from './store/effects/load-restaurant-data-effect.service';
+import { MapDetailComponent } from './detail-section/map-detail/map-detail.component';
+import { ReviewDetailComponent } from './detail-section/review-detail/review-detail.component';
+import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer } from '@ngrx/router-store';
+import { CustomRouterStateSerializer } from './store/custom-router-serializer';
 
 // Combined reducer for application state
 export const reducers: ActionReducerMap<ApplicationState> = {
   dataState,
-  uiState
+  uiState,
+  routerReducer: routerReducer
 };
 
 
@@ -45,7 +50,9 @@ export const reducers: ActionReducerMap<ApplicationState> = {
     RestaurantListComponent,
     RestaurantItemComponent,
     RestaurantDetailComponent,
-    FooterComponent
+    FooterComponent,
+    MapDetailComponent,
+    ReviewDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -53,6 +60,7 @@ export const reducers: ActionReducerMap<ApplicationState> = {
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),
     StoreDevtoolsModule.instrument({maxAge: 25}),
+    StoreRouterConnectingModule,
     EffectsModule.forRoot([
       LoadRestaurantDataEffectService
     ]),
@@ -60,7 +68,9 @@ export const reducers: ActionReducerMap<ApplicationState> = {
       apiKey: 'AIzaSyAY6KNYUj8C4vNV8acp8pIw0FX4-HyDBn4'
     })
   ],
-  providers: [RestaurantService],
+  providers: [
+    RestaurantService,
+  {provide: RouterStateSerializer, useClass: CustomRouterStateSerializer}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

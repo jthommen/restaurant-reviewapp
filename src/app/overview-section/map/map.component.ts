@@ -27,7 +27,6 @@ export class MapComponent{
   }
 
   onMarkerClick(id) {
-    console.log('Marker clicked');
     this.router.navigate(['/details', id])
   }
 

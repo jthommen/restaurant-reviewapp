@@ -12,6 +12,6 @@
     [longitude]="marker.lng"
     [title]="marker.name"
     [iconUrl]="'/icons/map-marker-icon.png'"
-    (markerClick)="onMarkerClick()"
+    (markerClick)="onMarkerClick(marker.id)"
   ></agm-marker>
 </agm-map>

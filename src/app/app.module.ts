@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule} from '@angular/common/http';
+import { RouterModule } from '@angular/router';
 
 // Custom Component Imports
 import { AppComponent } from './app.component';
@@ -15,6 +16,7 @@ import { DetailSectionComponent } from './detail-section/detail-section.componen
 import { RestaurantDetailComponent } from './detail-section/restaurant-detail/restaurant-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { RestaurantService } from './services/restaurant.service';
+import { routes } from './routes';
 
 // NgRx Imports
 import { ActionReducerMap, StoreModule } from '@ngrx/store';
@@ -48,6 +50,7 @@ export const reducers: ActionReducerMap<ApplicationState> = {
   imports: [
     BrowserModule,
     HttpClientModule,
+    RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),
     StoreDevtoolsModule.instrument({maxAge: 25}),
     EffectsModule.forRoot([

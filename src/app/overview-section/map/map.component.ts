@@ -4,6 +4,7 @@ import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
 import { stateToFilterResultMarkerSelector } from './stateToFilterResultMarkerSelector';
 import { MapMarkerVM } from './map-marker.vm';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'map-section',
@@ -18,13 +19,16 @@ export class MapComponent{
 
   markerCoordinates$: Observable<MapMarkerVM[]>;
 
-  constructor(private store: Store<ApplicationState>) { 
+  constructor(
+    private store: Store<ApplicationState>,
+    private router: Router) { 
 
     this.markerCoordinates$ = store.select(stateToFilterResultMarkerSelector);
   }
 
-  onMarkerClick() {
+  onMarkerClick(id) {
     console.log('Marker clicked');
+    this.router.navigate(['/details', id])
   }
 
 

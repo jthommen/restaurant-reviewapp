@@ -10,6 +10,8 @@
     *ngFor="let marker of markerCoordinates$ | async"
     [latitude]="marker.lat"
     [longitude]="marker.lng"
-    (markerClick)="onMarkerClick()"  
+    [title]="marker.name"
+    [iconUrl]="'/icons/map-marker-icon.png'"
+    (markerClick)="onMarkerClick()"
   ></agm-marker>
 </agm-map>

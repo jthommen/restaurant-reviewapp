@@ -1,17 +1,24 @@
 import { ApplicationState } from "../../store/application-state";
-import { Restaurant } from "../../../shared/model/restaurant";
 import * as _ from 'lodash';
+import { MapMarkerVM } from "./map-marker.vm";
 
 export function stateToFilterResultMarkerSelector(state: ApplicationState) {
 
-    let results: Restaurant["latlng"][] = [];
+    let results: MapMarkerVM[] = [];
     const cuisineFilter = state.uiState.filterCuisines;
     const neighborhoodFilter = state.uiState.filterNeighborhoods;
 
     if(cuisineFilter === 'All' && neighborhoodFilter === 'All'){
 
         _.map(state.dataState.restaurants, function(restaurant) {
-            results.push(restaurant.latlng)
+            let mapMarker = {
+                lat: restaurant.latlng.lat,
+                lng: restaurant.latlng.lng,
+                name: restaurant.name,
+                id: restaurant.id
+            };
+
+            results.push(mapMarker);
         });
 
     } else {
@@ -22,7 +29,14 @@ export function stateToFilterResultMarkerSelector(state: ApplicationState) {
                 (cuisineFilter === restaurant.cuisine_type || cuisineFilter === 'All') &&
                 (neighborhoodFilter === restaurant.neighborhood || neighborhoodFilter === 'All')
             ) {
-                results.push(restaurant.latlng);
+                let mapMarker = {
+                    lat: restaurant.latlng.lat,
+                    lng: restaurant.latlng.lng,
+                    name: restaurant.name,
+                    id: restaurant.id
+                };
+    
+                results.push(mapMarker);
             }
         });
 

@@ -11,6 +11,7 @@ const app: Application = express();
 
 app.use(bodyParser.json());
 app.use('/img', express.static(__dirname + '/public/img'));
+app.use('/icons', express.static(__dirname + '/public/icons'));
 
 // API Endpoints
 

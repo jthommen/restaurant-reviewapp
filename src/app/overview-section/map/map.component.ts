@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { ApplicationState } from '../../store/application-state';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs/Observable';
-import { Restaurant } from '../../../shared/model/restaurant';
 import { stateToFilterResultMarkerSelector } from './stateToFilterResultMarkerSelector';
+import { MapMarkerVM } from './map-marker.vm';
 
 @Component({
   selector: 'map-section',
@@ -16,7 +16,7 @@ export class MapComponent{
   lng: number = -73.987501;
   zoom: number = 12;
 
-  markerCoordinates$: Observable<Restaurant["latlng"][]>;
+  markerCoordinates$: Observable<MapMarkerVM[]>;
 
   constructor(private store: Store<ApplicationState>) { 
 

@@ -4,7 +4,7 @@ import { ApplicationState } from '../../store/application-state';
 import { LoadRestaurantDataAction } from '../../store/actions';
 import { Observable } from 'rxjs/Observable';
 import { Restaurant } from '../../../shared/model/restaurant';
-import { stateToFilterResultSelector } from './stateToFilterResultSelector';
+import { stateToFilterResultRestaurantSelector } from './stateToFilterResultRestaurantSelector';
 
 @Component({
   selector: 'restaurant-list',
@@ -17,7 +17,7 @@ export class RestaurantListComponent implements OnInit {
 
   constructor(private store: Store<ApplicationState>) { 
 
-    this.restaurants$ = store.select(stateToFilterResultSelector);
+    this.restaurants$ = store.select(stateToFilterResultRestaurantSelector);
   }
 
   ngOnInit() {

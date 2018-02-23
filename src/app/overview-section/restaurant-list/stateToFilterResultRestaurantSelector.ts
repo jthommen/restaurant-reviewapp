@@ -1,9 +1,8 @@
 import { ApplicationState } from "../../store/application-state";
 import { Restaurant } from "../../../shared/model/restaurant";
-
 import * as _ from 'lodash';
 
-export function stateToFilterResultSelector(state: ApplicationState) {
+export function stateToFilterResultRestaurantSelector(state: ApplicationState) {
 
     let results: Restaurant[] = [];
     const cuisineFilter = state.uiState.filterCuisines;
@@ -24,6 +23,6 @@ export function stateToFilterResultSelector(state: ApplicationState) {
     }
 
     results = _.without(results, undefined);
-
+    
     return results;
 }

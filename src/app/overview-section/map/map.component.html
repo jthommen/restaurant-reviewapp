@@ -5,4 +5,11 @@
   [scrollwheel]="false"
   [fullscreenControl]="true"
   [mapTypeControl]="true"
-></agm-map>
+>
+  <agm-marker 
+    *ngFor="let marker of markerCoordinates$ | async"
+    [latitude]="marker.lat"
+    [longitude]="marker.lng"
+    (markerClick)="onMarkerClick()"  
+  ></agm-marker>
+</agm-map>

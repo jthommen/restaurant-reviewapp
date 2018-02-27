@@ -10,6 +10,7 @@ export class RestaurantDetailComponent implements OnInit {
 
   @Input()
   restaurant: Restaurant;
+  
 
   constructor() { }
 

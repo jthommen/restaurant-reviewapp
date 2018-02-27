@@ -1,6 +1,11 @@
-<section id="reviews-container">
+<section id="reviews-container" *ngIf="restaurant">
   <h2>Reviews</h2>
-  <ul id="reviews-list">
-    <li></li>
+  <ul id="reviews-list" >
+    <li *ngFor="let review of restaurant.reviews">
+      <p>{{review.name}}</p>
+      <p>{{review.date}}</p>
+      <p>Rating: {{review.rating}}</p>
+      <p>{{review.comments}}</p>
+    </li>
   </ul>
 </section>

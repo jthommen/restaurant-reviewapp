@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Restaurant } from '../../../shared/model/restaurant';
 
 @Component({
   selector: 'map-detail',
@@ -6,6 +7,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./map-detail.component.css']
 })
 export class MapDetailComponent implements OnInit {
+
+  @Input()
+  restaurant: Restaurant;
+  zoom = 12;
 
   constructor() { }
 

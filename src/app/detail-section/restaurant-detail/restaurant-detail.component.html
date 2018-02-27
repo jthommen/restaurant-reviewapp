@@ -1,11 +1,36 @@
-<section id="restaurant-container">
+<section id="restaurant-container" *ngIf="restaurant" >
   <h1 id="restaurant-name">{{restaurant.name}}</h1>
-  <img id="restaurant-img" class="restaurant-img" src="">
-  <p id="restaurant-cuisine"></p>
-  <p id="restaurant-address"></p>
+  <img id="restaurant-img" class="restaurant-img" src="/img/{{restaurant.id}}.jpg">
+  <p id="restaurant-cuisine">{{restaurant.cuisine_type}}</p>
+  <p id="restaurant-address">{{restaurant.address}}</p>
   <table id="restaurant-hours">
     <tr>
-      <td></td>
+      <td>Monday</td>
+      <td>{{restaurant.operating_hours.Monday}}</td>
+    </tr>
+    <tr>
+      <td>Tuesday</td>
+      <td>{{restaurant.operating_hours.Tuesday}}</td>
+    </tr>
+    <tr>
+      <td>Wednesday</td>
+      <td>{{restaurant.operating_hours.Wednesday}}</td>
+    </tr>
+    <tr>
+      <td>Thursday</td>
+      <td>{{restaurant.operating_hours.Thursday}}</td>
+    </tr>
+    <tr>
+      <td>Friday</td>
+      <td>{{restaurant.operating_hours.Friday}}</td>
+    </tr>
+    <tr>
+      <td>Saturday</td>
+      <td>{{restaurant.operating_hours.Saturday}}</td>
+    </tr>
+    <tr>
+      <td>Sunday</td>
+      <td>{{restaurant.operating_hours.Sunday}}</td>
     </tr>
   </table>
 </section>

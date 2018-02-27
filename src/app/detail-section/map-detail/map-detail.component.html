@@ -1,14 +1,16 @@
-<agm-map *ngIf="restaurant"
-  [latitude]="restaurant.latlng.lat"
-  [longitude]="restaurant.latlng.lng"
-  [zoom]="zoom"
-  [scrollwheel]="false"
-  [fullscreenControl]="true"
-  [mapTypeControl]="true">
-  <agm-marker 
+<div id="map-container">
+  <agm-map *ngIf="restaurant"
     [latitude]="restaurant.latlng.lat"
     [longitude]="restaurant.latlng.lng"
-    [title]="restaurant.name"
-    [iconUrl]="'/icons/map-marker-icon.png'"
-  ></agm-marker>
-</agm-map>
+    [zoom]="zoom"
+    [scrollwheel]="false"
+    [fullscreenControl]="true"
+    [mapTypeControl]="true">
+    <agm-marker 
+      [latitude]="restaurant.latlng.lat"
+      [longitude]="restaurant.latlng.lng"
+      [title]="restaurant.name"
+      [iconUrl]="'/icons/map-marker-icon.png'"
+    ></agm-marker>
+  </agm-map>
+</div>

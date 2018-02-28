@@ -4,14 +4,12 @@ agm-map {
 }
 
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 768px) {
     
     #map-container {
+        position: relative;
+        width: 100%;
         height: 100%;
-        position: absolute;
-        right: 0;
-        top: 80px;
-        width: 50%;
     }
 
     agm-map {

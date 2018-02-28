@@ -1,6 +1,8 @@
 agm-map {
     height: 300px;
+    width: 100vw;
 }
+
 
 @media screen and (min-width: 800px) {
     

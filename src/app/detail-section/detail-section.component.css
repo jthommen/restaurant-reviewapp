@@ -2,7 +2,6 @@
     display: flex;
     flex-wrap:  wrap;
 }
-
 @media screen and (min-width: 800px) {
     restaurant-detail {
         order: 1;

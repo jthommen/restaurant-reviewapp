@@ -1,27 +1,20 @@
 # RestaurantReviewapp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.7.
+Stage 1 for the Mobile Web Specialist Nanodegree
 
-## Development server
+Prerequisites:
+1. NodeJS
+2. NPM
+3. Angular CLI
+4. http-server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+To run the project:
+1. Clone the gitrepo with `git clone https://github.com/jthommen/restaurant-reviewapp`
+2. Change to repo directory with `cd restaurant-reviewapp``
+3. Install NPM packages `npm i`
+4. Run API Server with `npm run api-server`
+5. In a different command line tab build angular app with `ng build --prod`
+6. Run local webserver with `http-server /dist -p 8080 -P http://localhost:8090`
+7. Check out app in your webbrowser at `localhost:8080`
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).

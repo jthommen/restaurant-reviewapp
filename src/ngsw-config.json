@@ -27,8 +27,7 @@
     "name": "from-api",
     "urls": [
         "/img",
-        "/api/**",
-        "https://maps.googleapis.com/maps/api"],
+        "/api/**"],
     "cacheConfig": {
         "strategy": "performance",
         "maxSize": 20,

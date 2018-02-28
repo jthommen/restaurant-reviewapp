@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 import { UiState } from '../ui-state';
 import { SELECT_FILTER_CUISINE_ACTION, SelectFilterCuisineAction, SELECT_FILTER_NEIGHBORHOOD_ACTION, SelectFilterNeighborhoodAction } from '../actions';
-import _ = require('lodash');
+import * as _ from 'lodash';
 
 export function uiState(state: UiState, action: Action): UiState {
 

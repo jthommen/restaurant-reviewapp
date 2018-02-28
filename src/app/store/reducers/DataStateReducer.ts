@@ -2,7 +2,7 @@ import { Action } from '@ngrx/store';
 
 import { DataState } from "../data-state";
 import { RESTAURANT_DATA_LOADED_ACTION, RestaurantDataLoadedAction } from '../actions';
-import _ = require('lodash');
+import * as _ from 'lodash';
 
 export function dataState(state: DataState, action: Action): DataState {
 

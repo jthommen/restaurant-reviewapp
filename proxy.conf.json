@@ -1,14 +1,11 @@
+
 {
-    "/api": {
-        "target": "http://localhost:8090",
-        "secure": false
-    },
     "/img": {
-        "target": "http://localhost:8090",
+        "target": "https://firebasestorage.googleapis.com/v0/b/restaurant-reviewapp.appspot.com/o",
         "secure": false
     },
     "/icons": {
-        "target": "http://localhost:8090",
+        "target": "https://firebasestorage.googleapis.com/v0/b/restaurant-reviewapp.appspot.com/o",
         "secure": false
     }
 }

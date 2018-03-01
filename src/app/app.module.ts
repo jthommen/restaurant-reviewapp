@@ -20,6 +20,11 @@ import { FooterComponent } from './footer/footer.component';
 import { RestaurantService } from './services/restaurant.service';
 import { routes } from './routes';
 
+// Firebase Imports
+import { AngularFireModule } from 'angularfire2';
+import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireStorageModule } from 'angularfire2/storage';
+
 // NgRx Imports
 import { ActionReducerMap, StoreModule } from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
@@ -61,6 +66,9 @@ export const reducers: ActionReducerMap<ApplicationState> = {
     ServiceWorkerModule.register('/ngsw-worker.js', {
       enabled: environment.production
     }),
+    AngularFireModule.initializeApp(environment.firebase, 'restaurant-reviewapp'),
+    AngularFirestoreModule,
+    AngularFireStorageModule,
     HttpClientModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),

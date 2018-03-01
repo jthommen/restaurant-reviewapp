@@ -11,4 +11,5 @@ export interface Restaurant {
     cuisine_type: string;
     operating_hours: object;
     reviews: object[];
+    img_url?: string;
 }

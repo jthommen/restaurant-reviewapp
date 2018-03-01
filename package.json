@@ -8,8 +8,7 @@
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
-    "e2e": "ng e2e",
-    "api-server": "./node_modules/.bin/ts-node ./src/server/server.ts"
+    "e2e": "ng e2e"
   },
   "private": true,
   "dependencies": {
@@ -30,9 +29,7 @@
     "@ngrx/store-devtools": "^5.1.0",
     "ajv": "^6.1.1",
     "angularfire2": "^5.0.0-rc.6",
-    "body-parser": "^1.18.2",
     "core-js": "^2.4.1",
-    "express": "^4.16.2",
     "firebase": "^4.10.1",
     "firebase-admin": "^5.9.1",
     "lodash": "^4.17.5",

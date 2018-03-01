@@ -1,3 +1,5 @@
+// Used to seed data into firebase cloud firestore
+
 const admin = require('../../node_modules/firebase-admin');
 const serviceAccount = require("./service-key.json");
 

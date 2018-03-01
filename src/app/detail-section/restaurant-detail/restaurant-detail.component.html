@@ -7,7 +7,7 @@
 
 <section id="restaurant-container" *ngIf="restaurant" >
   <h2 id="restaurant-name">{{restaurant.name}}</h2>
-  <img id="restaurant-img" src="/img/{{restaurant.id}}.jpg"  alt="{{restaurant.name}} Interior">
+  <img id="restaurant-img" src="{{restaurant.img_url}}"  alt="{{restaurant.name}} Interior">
   <p id="restaurant-cuisine">{{restaurant.cuisine_type}}</p>
   <p id="restaurant-address">{{restaurant.address}}</p>
   <table id="restaurant-hours">

@@ -12,6 +12,11 @@
         "/*.bundle.css",
         "/*.bundle.js",
         "/*.chunk.js"
+      ],
+      "urls": [
+          "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700",
+          "https://fonts.gstatic.com/s/roboto/v18/KFOlCnqEu92Fr1MmEU9fBBc4AMP6lQ.woff2",
+          "https://fonts.gstatic.com/s/roboto/v18/KFOmCnqEu92Fr1Mu4mxKKTU1Kg.woff2"
       ]
     }
   }, {
@@ -23,5 +28,19 @@
         "/assets/**"
       ]
     }
-  }]
+  }],
+    "dataGroups": [{
+        "name": "from-api",
+        "urls": [
+            "/api/restaurants",
+            "/img/**",
+            "/icons/**",
+            "https://maps.googleapis.com/maps/**"
+        ],
+        "cacheConfig": {
+            "maxSize": 100,
+            "maxAge": "1d",
+            "timeout?": "3s"
+        }
+    }]
 }

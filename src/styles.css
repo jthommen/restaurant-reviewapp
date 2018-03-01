@@ -91,6 +91,7 @@ a img{
   text-transform: uppercase;
 }
 
+/* Uncommented due to udacity project review feedback
 @media screen and (min-width: 1200px) {
   app-root {
     width: 1200px;
@@ -100,3 +101,4 @@ a img{
   }
 
 }
+*/

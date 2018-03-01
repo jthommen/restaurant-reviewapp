@@ -5,6 +5,8 @@
   [scrollwheel]="false"
   [fullscreenControl]="true"
   [mapTypeControl]="true"
+  role="presentation"
+  aria-hidden="true"
 >
   <agm-marker 
     *ngFor="let marker of markerCoordinates$ | async"

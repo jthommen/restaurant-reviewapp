@@ -5,7 +5,9 @@
     [zoom]="zoom"
     [scrollwheel]="false"
     [fullscreenControl]="true"
-    [mapTypeControl]="true">
+    [mapTypeControl]="true"
+    role="presentation"
+    aria-hidden="true">
     <agm-marker 
       [latitude]="restaurant.latlng.lat"
       [longitude]="restaurant.latlng.lng"

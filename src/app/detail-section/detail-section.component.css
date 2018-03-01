@@ -2,20 +2,38 @@
     display: flex;
     flex-wrap:  wrap;
 }
+
+#filler {
+    width: 50%;
+    height: 30px;
+    display: none;
+}
+
 @media screen and (min-width: 768px) {
+
+    #detail-container {
+        position: relative;
+        overflow-y: auto;
+    }
+
+    #filler {
+        width: 50%;
+        display: block;
+    }
+
     restaurant-detail {
-        order: 1;
         width: 50%;
     }
 
     review-detail {
-        order: 3;
-        width: 100%;
+        width: 50%;
     }
 
     map-detail {
-        order: 2;
         width: 50%;
+        height: 100%;
+        position: absolute;
+        right: 0;
     }
 
 }

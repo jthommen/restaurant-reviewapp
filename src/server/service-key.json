@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "restaurant-reviewapp",
+  "private_key_id": "cc641ff198206a3148799f3a93490f986ebe406b",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCo0+i7K0R98nyI\nMcRVMZbqOFkV/mG1U1idjay5ad4GrjbT5jVejc1dDeVCmSV+qvTw4+qun0s6HJ94\nZOaPkz0d0Gvu7fTMOM+EZQMFz3TZlEhSmPQ8/U70fNPwaXjdSAUYarkKP2oYHQ7h\nTDIq1HZ0f7F8RG+J/juUbVZKnZT7hcFPZGQ54Fb6rCJ9/+BTgk3HyrvaYjHlJTmD\n0o6HFegQXY0kkEaHyiK7pb4tIJgHsF/hYcNmUSsRka7SalyDd7sxYtb6mTRqTb3S\nP3/g8UMRlGG/ylbq1Rqho3zcI/ageguESvYkdcxe60o3PEsh566ygaeqWyPsO1LB\nsG87CM1ZAgMBAAECgf8zUeH+5vLSK6eLzT+zCZVS+f/FSKdyEBk4y39c66NkFkLw\n2LgSO2UuUnk+bIEgblA4op3wqNfxuWVAfmuJeWbI3qtF+aT7C+ZeTdZg8VZQTZS8\nv9diMsjJ5YuyGs90kPqmNQPKspGC9MQb2/vkAf/x4tDp47kSZ7JKGnJyfBgC+Ucw\nqSWyvUDlrHsDe7r1bJ1fv21kEulm1CXsJ3Gf+O4xQfEV4yISDo6WWCIruIi6lxht\na/h9m44EcxJdOtz2Ot6s25LNR2M8i6GMKq8gksp3FqSdmYGRpBSlRZ2YuLd7pp+B\nxpipnpU0By2xJE9/ugkKKigFxn+TEkYt35mwUrECgYEA27Q+IBikM5JZWpFX0rVp\n/YC9NBVpkU1HvetAYPZz3n9XKAjcWT1pDiTqAJfpO/5qYZtN7NV1C1to4cVfynAW\nrQeYL74UM402diLkW1JCMiHDyl/gi4mzlrHZ/hkAXKjLumznspOKdbos5pEgbZhj\n54v04HEHYcsvZ0qg7Ixvt5ECgYEAxLf/jb5HTvU92J/hI8j95Ept53HP1f5g/zl0\nsN+hz0W/0d0TkVGc7QEO/gBtSOurLiTxCbTs+JndBzuoXdC7NPIrbbx64F+Snw7T\n3rxZWOiJMAnP5iXAwUTvbTFr8ti6QiJdwuDCsIzk+Zww90EcaAQglFllyGE9Za70\n0mONpUkCgYEAvniv14GlcXRydNtGyU0v+2/OGEZsBGV8SgGXCbkAUSgS9olgBxn/\nZxzHpgYNVU7HCaHr1+RjGZqA/iLwXf/5GL9ZyCJBP0QwsBCl6yoQa4fsRxoCANc7\n0+ySsgEY2Dwai5/460+QHWpvnOC6vWj9S/OBM8ep/7V4flMr2ogSHpECgYEAj4ww\n6G70PBLLKZspP+K4GnGRl3U+k0pH35Y+p57YxZaBLhQj5kPmvi+qkAEhvjdyt35v\ngYTL83DbkB6hcqwRH8ajmDUUeUxkgrrgMkXA8RbmnO5cDfZ4nM+/4y9QNWqfKAlJ\n4B4BE7IMmHS4aoTRxLlWSMqfckQ6+EteDXRl9TkCgYEAglegzqvGb7EsFZwnSLV3\n7fZVIeSIRVxpxTBJDZAdrk49/L0WFnB2FnKyvVnQOnwVS2lMZlrOVMVkxLcA+3By\n4OgVZ+Xq7w8MBwtz5RBJdzVDFkvOK/m7xKHNv3Cr0ZGV0DroTkLmZr2Hxl+bdosd\nMAEYblDqvECg2p1I1wnJqKk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "data-transfer@restaurant-reviewapp.iam.gserviceaccount.com",
+  "client_id": "108267313694867959939",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://accounts.google.com/o/oauth2/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/data-transfer%40restaurant-reviewapp.iam.gserviceaccount.com"
+}

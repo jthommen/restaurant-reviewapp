@@ -24,13 +24,13 @@
     }
   }],
   "dataGroups": [{
-    "name": "from-api",
+    "name": "api-performance",
     "urls": [
-        "/img",
-        "/api/**"],
+        "/",
+        "/details/**"],
     "cacheConfig": {
         "strategy": "performance",
-        "maxSize": 20,
+        "maxSize": 50,
         "maxAge": "2d",
         "timeout": "3s"
     }

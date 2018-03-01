@@ -1,0 +1,18 @@
+{
+    "short_name": "Restaurant Reviews",
+    "name": "Restaurant Review App",
+    "start_url": "/",
+
+    "theme_color": "#3397DB",
+    "background_color": "#ffffff",
+
+    "display": "standalone",
+    "orientation": "portrait",
+    "icons": [
+      {
+        "src": "/favicon.png",
+        "sizes": "50x50",
+        "type": "image/png"
+      }
+    ]
+}

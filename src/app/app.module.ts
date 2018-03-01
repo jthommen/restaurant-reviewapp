@@ -26,16 +26,26 @@ import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireStorageModule } from 'angularfire2/storage';
 
 // NgRx Imports
-import { ActionReducerMap, StoreModule } from '@ngrx/store';
+import { 
+  ActionReducerMap,
+  StoreModule
+} from '@ngrx/store';
 import { EffectsModule } from '@ngrx/effects';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
-import { ApplicationState, INITIAL_APPLICATION_STATE } from './store/application-state';
+import { 
+  ApplicationState,
+  INITIAL_APPLICATION_STATE
+} from './store/application-state';
 import { dataState } from './store/reducers/DataStateReducer';
 import { uiState } from './store/reducers/UiStateReducer';
 import { LoadRestaurantDataEffectService } from './store/effects/load-restaurant-data-effect.service';
 import { MapDetailComponent } from './detail-section/map-detail/map-detail.component';
 import { ReviewDetailComponent } from './detail-section/review-detail/review-detail.component';
-import { StoreRouterConnectingModule, routerReducer, RouterStateSerializer } from '@ngrx/router-store';
+import {
+  StoreRouterConnectingModule,
+  routerReducer,
+  RouterStateSerializer
+} from '@ngrx/router-store';
 import { CustomRouterStateSerializer } from './store/custom-router-serializer';
 
 // Combined reducer for application state

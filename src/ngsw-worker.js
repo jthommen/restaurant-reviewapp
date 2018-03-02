@@ -1,3 +1,5 @@
+// File for manual service worker
+
 // Caching on install
 self.addEventListener('install', (event) => {
 

@@ -12,11 +12,5 @@ if (environment.production) {
   enableProdMode();
 }
 
-// Platform Browser Initialization with Service Worker Registration
-platformBrowserDynamic().bootstrapModule(AppModule).then(() => {
-  if ('serviceWorker' in navigator && environment.production) {
-    navigator.serviceWorker.register('/ngsw-worker.js');
-  }
-})
-.then(() => console.log('Service-Worker Registered!'))
+platformBrowserDynamic().bootstrapModule(AppModule)
 .catch(err => console.log(err));

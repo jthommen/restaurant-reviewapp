@@ -4,6 +4,7 @@ import { AgmCoreModule } from '@agm/core';
 import { HttpClientModule} from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { environment } from '../environments/environment';
+import { ServiceWorkerModule } from '@angular/service-worker';
 
 // Custom Component Imports
 import { AppComponent } from './app.component';
@@ -57,6 +58,9 @@ export const reducers: ActionReducerMap<ApplicationState> = {
   ],
   imports: [
     BrowserModule,
+    ServiceWorkerModule.register('/ngsw-worker.js', {
+      enabled: environment.production
+    }),
     HttpClientModule,
     RouterModule.forRoot(routes),
     StoreModule.forRoot(reducers, {initialState: INITIAL_APPLICATION_STATE}),

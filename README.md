@@ -14,7 +14,5 @@ To run the project:
 3. Install NPM packages `npm i`
 4. Run API Server with `npm run api-server`
 5. In a different command line tab build angular app with `ng build --prod`
-6. Run local webserver with `http-server /dist -p 8080 -P http://localhost:8090`
-7. Check out app in your webbrowser at `localhost:8080`
-
-
+6. Open different command line tab and run local webserver with `http-server /dist -p 8080 -P http://localhost:8090 -c-1`
+7. Open your browser in an incognito window and check out app in your webbrowser at `localhost:8080`
